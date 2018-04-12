@@ -1,8 +1,12 @@
+html {
+  background-color: #eee;
+}
+
 body {
     background-color: #fff;
     padding: 0;
     font-family: "Open Sans", arial, sans-serif;
-    max-width: 1024px;
+    max-width: 1200px;
     margin:auto;
 }
 
@@ -11,8 +15,39 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    height: 44px;
+    height: 50px;
     background-color: #fff;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+header .text {
+  font-size: 12px;
+  font-weight: normal;
+  width: 180px;
+  padding: 0 5px;
+}
+header .header_title {
+    color: #1fbed6;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+header .header_sub_title {
+    color: #787878;
+}
+
+.main-menu {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #4d4d4c;
+}
+.main-menu ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .mainheader {
@@ -23,6 +58,7 @@ header {
   width: 100%;
   height: 500px;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   flex-direction: column;
@@ -55,6 +91,7 @@ header {
 
 .main_info_header {
   text-align: center;
+  margin: 0 10% 0 10%;
 }
 
 .main_info_header h3 {
@@ -69,9 +106,10 @@ header {
 
 .block_picto {
   margin:0;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   flex-grow: 1;
@@ -80,8 +118,9 @@ header {
 .block_picto article {
   background-color: #1fbed6;
   color: #fff;
-  width: 220px;
+  width: 300px;
   height: auto;
+  margin-bottom: 20px;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -94,13 +133,17 @@ header {
   border-radius: 50%;
 }
 
+.block_picto .farond {
+  padding: 15px 19px 15px 19px;
+}
+
 .block_picto h4 {
-  margin: 10px 0 0 0;
+  margin: 15px 0 10px 0;
   font-size: 18px;
   font-weight: 600;
 }
 .block_picto p {
-  margin: 0;
+  margin: 0 3px 0 3px;
   font-size: 14px;
   font-weight: 300;
 }
@@ -114,10 +157,9 @@ header {
 }
 
 h4 {
-  margin-left: 7%;
+  margin-left: 8%;
   font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .actu {
@@ -125,6 +167,7 @@ h4 {
   flex-direction: row;
   justify-content: space-around;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 .actu article {
   width: 200px;
@@ -142,13 +185,91 @@ h4 {
   margin:0;
   font-size: 10px;
   font-weight: normal;
+  color: #999;
 }
 
 .actu p {
   margin:0;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   float: right;
+  color: #999;
+}
+
+.moreactu {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.moreactu a {
+  text-decoration: none;
+  color: #000;
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: 1px solid #999;
+  padding: 10px 25px;
+}
+
+footer {
+  background-color: #1fbed6;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 20px 0 20px 0;
+}
+
+.footerflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex: 1;
+  height:auto;
+}
+
+.footerflex article {
+  max-width: 200px;
+  height: auto;
+  margin: 0;
+}
+
+.footerflex a {
+  color: #fff;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.icons {
+  font-size: 16px;
+  margin: 10px 5px 0 0;
+}
+
+.doublebr {
+  font-size: 20px;
+}
+
+.listfooter {
+  text-decoration: none;
+  list-style: none;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.marginbeflist {
+  margin-bottom: 0;
+}
+
+.ml {
+  text-align: center;
+  margin: 0;
 }
 
 /* Menu Burger */
@@ -246,6 +367,7 @@ h4 {
   }
 }
 
+
 /* Grand Menu */
 @media screen and (min-width : 640px) {
 
@@ -281,34 +403,19 @@ h4 {
 
   nav.nav_menu ul ul {
       display: none;
-      padding: 0;
-      padding-top: 7px;
+      padding: 12px 0 0 0;
       position: absolute;
       color: #fff;
+      font-size: 11px;
+      font-weight: normal;
   }
   nav.nav_menu ul ul li {
       display: flex;
-      justify-content: center;
+      justify-content: left;
       /* padding: 3px 10px; */
-      background-color: #fff;
-      margin: 2px;
-  }
-  .header-main {
-      background-color: #fff;
-      padding: 8px 0;
-  }
-  .header-main img {
-      align-self: center;
-  }
-  .header-main .text {
-      width: 180px;
-      padding: 0 5px;
-  }
-  .header-main .header_title {
-      color: #1fbed6;
-      text-transform: uppercase;
-  }
-  .header-main .header_sub_title {
-      color: #787878;
+      background-color: #1fbed6;
+      color: #fff;
+      padding: 5px;
+      margin: 3px;
   }
 }
