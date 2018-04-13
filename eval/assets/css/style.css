@@ -30,7 +30,6 @@ header .text {
 header .header_title {
     color: #1fbed6;
     text-transform: uppercase;
-    font-weight: normal;
 }
 header .header_sub_title {
     color: #787878;
@@ -272,6 +271,24 @@ footer {
   margin: 0;
 }
 
+.submenu ul li a:hover, footer a:hover {
+  color: #575757;
+}
+
+.main-menu li a:hover {
+  color: #1fbed6;
+}
+
+.mainheader a:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.moreactu a:hover {
+  color: #1fbed6;
+  border: 1px solid #1fbed6;
+}
+
 /* Menu Burger */
 @media screen and (max-width : 640px) {
   .text {
@@ -323,11 +340,11 @@ footer {
   .main-menu li {
     transition: transform .7s;
   }
-  ul {
+  .main-menu{
     display: none;
   }
 
-  ul li {
+  .main-menu li {
     padding:10px 0 10px 0;
     background-color: #fff;
     color: #000;
@@ -336,20 +353,18 @@ footer {
     width: 100%;
   }
 
-  a {
+  .main-menu a {
     margin-left: 10px;
     text-decoration: none;
     text-transform: uppercase;
   }
 
-  ul li a:hover {
-    color: #1fbed6;
-  }
-
-  #menu-toggler:checked ~ ul, submenu2 {
+  #menu-toggler:checked ~ ul {
     display:block;
     padding-top: 5px;
     padding-left: 0;
+    width: 98%;
+    margin-left: 1%;
   }
   #menu-toggler:checked ~ .menu-toggler__label .menu-toggler__label__visual span {
     transform:
@@ -367,6 +382,21 @@ footer {
   #menu-toggler:checked ~ .menu-toggler__label .menu-toggler__label__visual span:nth-child(2){
     transform: rotate(-45deg) translate(0, -1px);
   }
+
+  .submenu {
+    padding-bottom: 0px;
+  }
+  .submenu ul {
+    padding: 15px 0 5px 5px;
+    width: 98%;
+  }
+
+  .submenu ul li {
+    background-color: #1fbed6;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+
 }
 
 
